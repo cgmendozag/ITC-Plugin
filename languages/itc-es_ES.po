@@ -1,0 +1,342 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Impressive Themed Categories\n"
+"POT-Creation-Date: 2014-02-22 12:50+0100\n"
+"PO-Revision-Date: 2014-02-22 12:51+0100\n"
+"Last-Translator: Carlos Mendoza <cmendoza@opensistemas.com>\n"
+"Language-Team: Opensistemas <cmendoza@opensistemas.com>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_n:1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../dnd-upload.php:74
+msgid "File Type not allowed"
+msgstr "Tipo de Archivo no permitido"
+
+#: ../impressive-themed-categories.php:76
+msgid "IT Categories"
+msgstr ""
+
+#: ../impressive-themed-categories.php:82
+msgid "Impressive Themed Categories Options"
+msgstr "Ajustes de ITC"
+
+#: ../impressive-themed-categories.php:85
+msgid "Settings"
+msgstr "Ajustes"
+
+#: ../impressive-themed-categories.php:86
+msgid "Categories"
+msgstr ""
+
+#: ../impressive-themed-categories.php:119
+msgid "Color Settings"
+msgstr "Ajustes de Color"
+
+#: ../impressive-themed-categories.php:120
+msgid "Colors:"
+msgstr "Colores:"
+
+#: ../impressive-themed-categories.php:144
+msgid "Missing Catalog Name"
+msgstr "No se ha indicado nombre de cat&aacute;logo"
+
+#: ../impressive-themed-categories.php:145
+msgid "The name is already in use"
+msgstr "Ese nombre ya est&aacute; en uso"
+
+#: ../impressive-themed-categories.php:146
+msgid "No matches found"
+msgstr "No se han encontrando coincidencias"
+
+#: ../impressive-themed-categories.php:147
+msgid "Wrong search term"
+msgstr "T&eacute;rmino de b&uacute;squeda incorrecto"
+
+#: ../impressive-themed-categories.php:148 ../itc-icono-plantilla.php:34
+msgid "This action can not be undone. Are you sure you want to proceed?"
+msgstr "Esta acción no se puede deshacer. ¿Está seguro de proceder?"
+
+#: ../impressive-themed-categories.php:175
+msgid "ITC Information"
+msgstr "Informaci&oacute;n de ITC"
+
+#: ../impressive-themed-categories.php:228
+#: ../impressive-themed-categories.php:233
+msgid "ITC Settings"
+msgstr "Ajustes de ITC"
+
+#: ../itc-plantilla-categories-edit.php:12 ../itc-plantilla-categories.php:10
+#: ../itc-plantilla.php:12
+msgid "Color"
+msgstr "Color"
+
+#: ../itc-plantilla-categories-edit.php:39 ../itc-plantilla-categories.php:31
+#: ../itc-plantilla.php:39
+msgid "Icon"
+msgstr "Icono"
+
+#: ../itc-color-plantilla.php:21
+msgid "Current color code:"
+msgstr "C&oacute;digo del color seleccionado:"
+
+#: ../itc-color-plantilla.php:24
+msgid "New Color"
+msgstr "Nuevo Color"
+
+#: ../itc-color-plantilla.php:25
+msgid "Remove Selected Color"
+msgstr "Eliminar el color seleccionado"
+
+#: ../itc-color-plantilla.php:27 ../itc-color-plantilla.php:28
+msgid "Color name"
+msgstr "Nombre del color"
+
+#: ../itc-color-plantilla.php:31
+msgid "Add"
+msgstr "Agregar"
+
+#: ../itc-color-plantilla.php:34
+msgid "Changes will not take effect until settings are saved."
+msgstr "Los cambios no se ver&aacute;n reflejados hasta que sean guardados."
+
+#: ../itc-icono-plantilla.php:7
+msgid "Remove Selected Icon"
+msgstr "Eliminar el icono seleccionado"
+
+#~ msgid "This post type was made to build different types of catalogs"
+#~ msgstr ""
+#~ "Este tipo de post ha sido creado para crear diferentes cat&aacute;logos "
+#~ "de publicaciones"
+
+#~ msgid "Catalog"
+#~ msgid_plural "Catalogs"
+#~ msgstr[0] "Cat&aacute;logo"
+#~ msgstr[1] "Cat&aacute;logos"
+
+#~ msgid "Add New"
+#~ msgstr "A&ntilde;adir Nuevo"
+
+#~ msgid "Add New Catalog"
+#~ msgstr "A&ntilde;adir Nuevo Cat&aacute;logo"
+
+#~ msgid "Edit Catalog"
+#~ msgstr "Editar Cat&aacute;logo"
+
+#~ msgid "New Catalog"
+#~ msgstr "Nuevo Cat&aacute;logo"
+
+#~ msgid "View Catalog"
+#~ msgstr "Ver Cat&aacute;logo"
+
+#~ msgid "Catalog Options"
+#~ msgstr "Opciones de Cat&aacute;logo"
+
+#~ msgid "No catalog selected"
+#~ msgstr "No se ha seleccionado cat&aacute;logo"
+
+#~ msgid "Missing Catalog Description"
+#~ msgstr "No se ha indicado descripci&oacute;n"
+
+#~ msgid "No geography selected"
+#~ msgstr "No se ha seleccionado geograf&iacute;a"
+
+#~ msgid "No theme selected"
+#~ msgstr "No se ha seleccionado tem&aacute;tica"
+
+#~ msgid "No document type selected"
+#~ msgstr "No se ha seleccionado tipo de documento"
+
+#~ msgid "No default unit selected"
+#~ msgstr "No se ha seleccionado unidad por defecto"
+
+#~ msgid "No width selected"
+#~ msgstr "No se ha seleccionado anchura deseable"
+
+#~ msgid "No title specified"
+#~ msgstr "No se ha especificado t&iacute;tulo"
+
+#~ msgid "No excerpt specified"
+#~ msgstr "No se ha indicado resumen"
+
+#~ msgid "No default disclaimer selected"
+#~ msgstr "No se ha seleccionado disclaimer por defecto"
+
+#~ msgid ""
+#~ "The title and abstract must be available in the other navigation languages"
+#~ msgstr ""
+#~ "El t&iacute;tulo y resumen deben estar disponibles en los dem&aacute;s "
+#~ "idiomas de navegaci&oacute;n"
+
+#~ msgid "Catalog Information"
+#~ msgstr "Informaci&oacute;n de Cat&aacute;logo"
+
+#~ msgid "Select Publication type"
+#~ msgstr "Seleccione tipo de publicaci&oacute;n"
+
+#~ msgid "Title Bold"
+#~ msgstr "T&iacute;tulo en Negrita"
+
+#~ msgid "Title"
+#~ msgstr "T&iacute;tulo"
+
+#~ msgid "Default Disclaimer"
+#~ msgstr "Disclaimer por Defecto"
+
+#~ msgid "Publication"
+#~ msgstr "Publicaci&oacute;n"
+
+#~ msgid "Geography"
+#~ msgstr "Geograf&iacute;a"
+
+#~ msgid "Theme"
+#~ msgstr "Tem&aacute;tica"
+
+#~ msgid "Document type"
+#~ msgstr "Tipo de Documento"
+
+#~ msgid "Catalog updated."
+#~ msgstr "Cat&aacute;logo actualizado."
+
+#~ msgid "Catalog restored to revision from %s"
+#~ msgstr "Cat&aacute;logo restaurado a revisi&oacute;n de %s"
+
+#~ msgid "Catalog published."
+#~ msgstr "Cat&aacute;logo publicado."
+
+#~ msgid "Catalog saved."
+#~ msgstr "Cat&aacute;logo guardado."
+
+#~ msgid "Catalog submitted."
+#~ msgstr "Cat&aacute;logo enviado."
+
+#~ msgid "Catalog scheduled for: <strong>%1$s</strong>."
+#~ msgstr "Cat&aacute;logo programado para: <strong>%1$s</strong>."
+
+#~ msgid "Catalog draft updated."
+#~ msgstr "Borrador de Cat&aacute;logo  actualizado."
+
+#~ msgid "No Geography assigned"
+#~ msgstr "Sin Geograf&iacute;a asociada"
+
+#~ msgid "Description"
+#~ msgstr "Descripci&oacute;n"
+
+#~ msgid "Main Geography"
+#~ msgstr "Geograf&iacute;a Principal"
+
+#~ msgctxt "female"
+#~ msgid "There is no translation for this %s"
+#~ msgstr "No se encuentra traducci&oacute;n para esta %s"
+
+#~ msgid "Main Theme"
+#~ msgstr "Tem&aacute;tica Principal"
+
+#~ msgid "Document type "
+#~ msgstr "Tipo de Documento"
+
+#~ msgctxt "male"
+#~ msgid "There is no translation for this %s"
+#~ msgstr "No se encuentra traducci&oacute;n para este %s"
+
+#~ msgid "Default Unit"
+#~ msgstr "Unidad por Defecto"
+
+#~ msgid "Unit"
+#~ msgstr "Unidad"
+
+#~ msgid "Default tags"
+#~ msgstr "Etiquetas por Defecto"
+
+#~ msgid "Desirable width"
+#~ msgstr "Anchura deseable"
+
+#~ msgid "Select Width"
+#~ msgstr "Seleccione ancho"
+
+#~ msgid "%d Column"
+#~ msgid_plural "%d Columns"
+#~ msgstr[0] "%d Columna"
+#~ msgstr[1] "%d Columnas"
+
+#~ msgid "Duration"
+#~ msgstr "Tiempo de permanencia"
+
+#~ msgid "Days"
+#~ msgstr "D&iacute;as"
+
+#~ msgid "Months"
+#~ msgstr "Meses"
+
+#~ msgid "Years"
+#~ msgstr "A&ntilde;os"
+
+#~ msgid "Dark blue"
+#~ msgstr "Azul oscuro"
+
+#~ msgid "Blue"
+#~ msgstr "Azul"
+
+#~ msgid "Light blue"
+#~ msgstr "Azul claro"
+
+#~ msgid "Green"
+#~ msgstr "Verde"
+
+#~ msgid "Light green"
+#~ msgstr "Verde claro"
+
+#~ msgid "Pink"
+#~ msgstr "Rosa"
+
+#~ msgid "Orange"
+#~ msgstr "Naranja"
+
+#~ msgid "Light orange"
+#~ msgstr "Naranja claro"
+
+#~ msgid "Yellow"
+#~ msgstr "Amarillo"
+
+#~ msgid "Drop images here!"
+#~ msgstr "¡Suelta las im&aacute;genes aqu&iacute;!"
+
+#~ msgid "Icons:"
+#~ msgstr "Iconos:"
+
+#~ msgid "Add new icon"
+#~ msgstr "A&ntilde;adir Nuevo Icono"
+
+#~ msgid "No geographies found"
+#~ msgstr "No se han encontrando geograf&iacute;as"
+
+#~ msgid "No themes found"
+#~ msgstr "No se han encontrando tem&aacute;ticas"
+
+#~ msgid "No documents found"
+#~ msgstr "No se han encontrando tipos de documento"
+
+#~ msgid "No units found"
+#~ msgstr "No se han encontrando unidades"
+
+#~ msgid "Lime"
+#~ msgstr "Lima"
+
+#~ msgid "Turquoise"
+#~ msgstr "Turquesa"
+
+#~ msgid "edit"
+#~ msgstr "editar"
+
+#~ msgid "Name"
+#~ msgstr "Nombre"
+
+#~ msgid "Save"
+#~ msgstr "Guardar"
