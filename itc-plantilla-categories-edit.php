@@ -9,7 +9,7 @@
 <table class="form-table">
     <tbody>
         <tr>
-            <th scope="row"><label for="category_color"><?php _e("Color", 'catalogo');?>:</label></th>
+            <th scope="row"><label for="category_color"><?php _e("Color", 'itc');?>:</label></th>
             <td>
                 <div class="control-group">
                     <div class="controls">
@@ -34,7 +34,7 @@
         </tr>
 
         <tr>
-            <th scope="row"><label for="category_icon"><?php _e("Icon", 'catalogo'); ?>:</label></th>
+            <th scope="row"><label for="category_icon"><?php _e("Icon", 'itc'); ?>:</label></th>
             <td>
                <select name="category_icon" id="category_icon" style="width: 120px">
                    <?php 

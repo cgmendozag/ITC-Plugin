@@ -30,7 +30,6 @@ if ($errors) {
  * @return int the ID of the attachment
  */
 function dnd_media_handle_upload($file_id, $post_data = array(), $overrides = array( 'test_form' => false )) {
-//error_log(print_r($_FILES,true));
 	$time = current_time('mysql');
 
 	$name = $_FILES['async-upload']['name'];
@@ -71,7 +70,7 @@ function os_handle_upload(&$file){
         }
 
         if(!in_array($file["type"], $allowedFileTypes)){
-            $file["error"] = __("File Type not allowed", "catalogo");
+            $file["error"] = __("File Type not allowed", "itc");
             return $file;
         }
         

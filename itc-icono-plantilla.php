@@ -1,4 +1,4 @@
-<?php $dnd_fileupload_dir = plugins_url('catalogo2/') ?>
+<?php $dnd_fileupload_dir = plugins_url('ITC-plugin/') ?>
 <select name="itc_icons" id="itc_icons" style="width: 80px">
     <?php foreach ($this->getAvailableIcons() as $icon => $fullUrl) { ?>
         <option data-img-src="<?php echo $fullUrl; ?>" value="<?php echo $icon; ?>"></option>

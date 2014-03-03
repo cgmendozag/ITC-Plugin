@@ -19,21 +19,21 @@ if (!class_exists('ITC_Plugin')) {
 
         function __construct() {
             global $wpdb;
-            add_action('wp_ajax_fancypost_remove_icon', array(&$this, 'ajax_remove_icon'));
-            add_action('admin_enqueue_scripts', array(&$this, 'incluirJs'));
-            add_action('plugins_loaded', array(&$this, 'load_text_domain'));
+            add_action('wp_ajax_fancypost_remove_icon', array($this, 'ajax_remove_icon'));
+            add_action('admin_enqueue_scripts', array($this, 'incluirJs'));
+            add_action('plugins_loaded', array($this, 'load_text_domain'));
 
             //Form para categorias
             add_action('category_add_form_fields', array($this, 'itc_add_category_fields'));
             add_action('category_edit_form', array($this, 'itc_edit_category_fields'));
 
             //acciones para CRUD en categorias
-            add_action('create_category', array(&$this, 'itc_save'), 10, 2);
-            add_action('edit_category', array(&$this, 'itc_save'), 10, 2);
+            add_action('create_category', array($this, 'itc_save'), 10, 2);
+            add_action('edit_category', array($this, 'itc_save'), 10, 2);
             add_action('delete_category', array($this, 'itc_delete'));
 
-            add_action('admin_menu', array(&$this, 'add_option_menu'));
-            add_action('admin_init', array(&$this, 'register_and_build_fields'));
+            add_action('admin_menu', array($this, 'add_option_menu'));
+            add_action('admin_init', array($this, 'register_and_build_fields'));
 
             $this->rutaIconos = content_url("themes/" . get_template() . $this->icons_path);
             $this->tablename = $wpdb->prefix . "itc";

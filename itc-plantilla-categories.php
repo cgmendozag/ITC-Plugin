@@ -7,7 +7,7 @@
     }
 </style>
 <div class="form-field">
-    <label for="category_color"><?php _e("Color", 'catalogo');?>:</label>
+    <label for="category_color"><?php _e("Color", 'itc');?>:</label>
     <select name="category_color" id="category_color" class="postform">
         <?php $colors = $this->getColors();
         foreach ($colors as $color){?>
@@ -28,7 +28,7 @@
     <p class="description"></p>
 </div>
 <div class="form-field">
-    <label for="category_icon"><?php _e("Icon", 'catalogo'); ?>:</label>
+    <label for="category_icon"><?php _e("Icon", 'itc'); ?>:</label>
     <select name="category_icon" id="category_icon" class="postform">
         <?php 
         $category_icon = get_post_meta($post->ID, 'category_icon', true);
