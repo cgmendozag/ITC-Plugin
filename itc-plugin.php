@@ -34,6 +34,8 @@ if (!class_exists('ITC_Plugin')) {
 
             add_action('admin_menu', array($this, 'add_option_menu'));
             add_action('admin_init', array($this, 'register_and_build_fields'));
+            
+            add_action('wp_head', array($this, 'includeCss'));
 
             $this->rutaIconos = content_url("themes/" . get_template() . $this->icons_path);
             $this->tablename = $wpdb->prefix . "itc";
@@ -123,6 +125,10 @@ if (!class_exists('ITC_Plugin')) {
                 wp_enqueue_script('itc-iconupload', plugins_url(basename(__DIR__) . "/js/iconupload.js"), array('plupload', 'plupload-html5', 'plupload-html4', 'plupload-handlers'));
             }
         }
+        
+        function includeCss() {
+                wp_enqueue_style('itc', plugins_url('css/itc.css', __FILE__));
+        }
 
         function getAvailableIcons() {
             $availableIcons = array();
@@ -172,6 +178,7 @@ if (!class_exists('ITC_Plugin')) {
             /* @var $wpdb wpdb */
             global $wpdb;
             $wpdb->delete($this->tablename, array("category_id" => $term_id), array("%d"));
+            $this->generateCSS();
         }
 
         function itc_save($term_id) {
@@ -185,6 +192,7 @@ if (!class_exists('ITC_Plugin')) {
             } else {
                 $wpdb->insert($this->tablename, array("category_id" => $term_id, "color" => $color, "icon" => $icon), array("%d", "%s", "%s"));
             }
+            $this->generateCSS();
         }
 
         function getITC($cat_id) {
@@ -196,6 +204,27 @@ if (!class_exists('ITC_Plugin')) {
             } else {
                 $vals["icon"] = $this->rutaIconos . $vals['icon'];
                 return $vals;
+            }
+        }
+        
+        function generateCSS(){
+            global $wpdb;
+            $template = ".##CLASS_NAME##{"
+                    . "background-color: ##BACKGROUND_COLOR##;"
+                    . "background: ##BACKGROUND_ICON##;"
+                    . "}";
+            $fp = fopen(WP_PLUGIN_DIR . "/". basename(__DIR__) . "/css/itc.css", "w+");
+            if(!$fp){
+                error_log("no fp");
+            }else{
+                $arrITCs = $wpdb->get_results("SELECT id, color, icon FROM $this->tablename", ARRAY_A);
+                foreach($arrITCs as $itc){
+                    $itc_class = str_replace("##CLASS_NAME##", "itc_{$itc["id"]}", $template);
+                    $itc_class = str_replace("##BACKGROUND_COLOR##", $itc["color"], $itc_class);
+                    $itc_class = str_replace("##BACKGROUND_ICON##", "url('" . $this->rutaIconos . $itc["icon"] . "')", $itc_class);
+                    fputs($fp, $itc_class);
+                }
+                fclose($fp);
             }
         }
 
