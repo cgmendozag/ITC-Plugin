@@ -7,6 +7,7 @@
   Author: Carlos Mendoza, Tamara Osona
   Author Email: cmendoza@opensistemas.com, tosona@opensistemas.com
  */
+  include "itc-functions.php";
 if (!class_exists('ITC_Plugin')) {
 
     class ITC_Plugin {
@@ -34,7 +35,7 @@ if (!class_exists('ITC_Plugin')) {
 
             add_action('admin_menu', array($this, 'add_option_menu'));
             add_action('admin_init', array($this, 'register_and_build_fields'));
-            
+
             add_action('wp_head', array($this, 'includeCss'));
 
             $this->rutaIconos = content_url("themes/" . get_template() . $this->icons_path);
@@ -78,7 +79,7 @@ if (!class_exists('ITC_Plugin')) {
                     submit_button();
                     ?>
                 </form>
-            <?php include "itc-icono-plantilla.php"; ?>
+                <?php include "itc-icono-plantilla.php"; ?>
             </div>
             <?php
         }
@@ -87,6 +88,7 @@ if (!class_exists('ITC_Plugin')) {
             register_setting('itc_options', 'itc_colors', array(&$this, 'validate_colors'));
             add_settings_section('color_section', __('Color Settings', 'itc'), array(&$this, 'section_cb'), __FILE__);
             add_settings_field('itc_colors', __("Colors:", "itc"), array(&$this, 'itc_colors_cb'), __FILE__, 'color_section');
+            
         }
 
         function section_cb() {
@@ -108,6 +110,7 @@ if (!class_exists('ITC_Plugin')) {
         function itc_icons_cb() {
             include "itc-icono-plantilla.php";
         }
+       
 
         function incluirJs($hook) {
             wp_enqueue_script('itc_script', plugins_url(basename(__DIR__) . '/js/itc.js'));
@@ -125,9 +128,9 @@ if (!class_exists('ITC_Plugin')) {
                 wp_enqueue_script('itc-iconupload', plugins_url(basename(__DIR__) . "/js/iconupload.js"), array('plupload', 'plupload-html5', 'plupload-html4', 'plupload-handlers'));
             }
         }
-        
+
         function includeCss() {
-                wp_enqueue_style('itc', plugins_url('css/itc.css', __FILE__));
+            wp_enqueue_style('itc', plugins_url('css/itc.css', __FILE__));
         }
 
         function getAvailableIcons() {
@@ -206,22 +209,24 @@ if (!class_exists('ITC_Plugin')) {
                 return $vals;
             }
         }
-        
-        function generateCSS(){
+
+        function generateCSS() {
             global $wpdb;
             $template = ".##CLASS_NAME##{"
-                    . "background-color: ##BACKGROUND_COLOR##;"
-                    . "background: ##BACKGROUND_ICON##;"
+                    . "background: ##BACKGROUND_ICON##  ##BACKGROUND_COLOR## no-repeat !important;"
+                    . "background-size: 150px 150px !important;"
+                    . "background-position:right bottom !important;"
                     . "}";
-            $fp = fopen(WP_PLUGIN_DIR . "/". basename(__DIR__) . "/css/itc.css", "w+");
-            if(!$fp){
+            $fp = fopen(WP_PLUGIN_DIR . "/" . basename(__DIR__) . "/css/itc.css", "w+");
+            if (!$fp) {
                 error_log("no fp");
-            }else{
-                $arrITCs = $wpdb->get_results("SELECT id, color, icon FROM $this->tablename", ARRAY_A);
-                foreach($arrITCs as $itc){
-                    $itc_class = str_replace("##CLASS_NAME##", "itc_{$itc["id"]}", $template);
-                    $itc_class = str_replace("##BACKGROUND_COLOR##", $itc["color"], $itc_class);
+            } else {
+                $arrITCs = $wpdb->get_results("SELECT category_id, color, icon FROM $this->tablename", ARRAY_A);
+                foreach ($arrITCs as $itc) {
+                    $itc_class = str_replace("##CLASS_NAME##", "itc_{$itc["category_id"]}", $template);
                     $itc_class = str_replace("##BACKGROUND_ICON##", "url('" . $this->rutaIconos . $itc["icon"] . "')", $itc_class);
+                    
+                    $itc_class = str_replace("##BACKGROUND_COLOR##", itc_background($itc["color"]), $itc_class);
                     fputs($fp, $itc_class);
                 }
                 fclose($fp);
