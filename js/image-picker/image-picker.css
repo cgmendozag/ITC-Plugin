@@ -10,9 +10,10 @@ ul.thumbnails.image_picker_selector li {
     float: left; }
 ul.thumbnails.image_picker_selector li .thumbnail {
     padding: 5px 5px 0px 5px;
-    border: 1px solid #dddddd; }
+    border: 1px solid #dddddd;
+    background: #ABABAB;}
 ul.thumbnails.image_picker_selector li .thumbnail img {
     width:40px;
     height: 40px;}
 ul.thumbnails.image_picker_selector li .thumbnail.selected {
-    background: #ABABAB; }
+    background:#2ea2cc; }
